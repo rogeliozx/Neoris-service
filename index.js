@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser'
 import crudRoutes from "./src/routes/cars.route.js"
 import connectMongo from './src/config/conection.js';
-
+import cors from 'cors'
 connectMongo()
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,6 +13,7 @@ app.use(
   })
 );
 
+app.use(cors());
 
 app.use('/cars',crudRoutes);
 

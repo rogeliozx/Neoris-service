@@ -1,0 +1,33 @@
+# Project README
+
+## Getting Started
+
+To initiate the project, follow these commands:
+
+1. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+2. Start the project:
+    ```bash
+    npm start
+    # or
+    npm run dev
+    ```
+
+## Code Coverage and Unit Testing
+
+The project boasts a 100% code coverage, ensured through rigorous unit testing in the controllers. To maintain the quality and reliability of the codebase, make sure to run tests regularly and address any failures promptly.
+
+## Areas for Improvement
+
+As we strive for continuous enhancement, here are some points to consider for refining the service:
+
+1. **Increase Coverage with Integration Tests:**
+   - Implement integration tests to ensure the smooth interaction of various components. This will help identify and address any potential issues that may arise in the integrated environment.
+
+2. **Enhance Function Separation:**
+   - Review the existing codebase and identify opportunities to further separate functions. Improved function separation enhances code readability, maintainability, and promotes a modular architecture.
+
+Feel free to contribute to these improvements and share your insights

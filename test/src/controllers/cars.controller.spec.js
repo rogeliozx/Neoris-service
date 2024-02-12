@@ -24,14 +24,20 @@ it("Should throw error",async ()=>{
 
 it("Should create new car",async ()=>{
     carModel.create = jest.fn().mockResolvedValue('test')
-    const data = await carsController.registerCar({body:{}}, res);
+    const data = await carsController.registerCar({params:{id:'test'},body:{}}, res);
     expect(data.newCar).toBe('test')
     expect(data.response).toBe(200)
 })
 
+it("Should return 400 ",async ()=>{
+    carModel.create = jest.fn().mockResolvedValue('test')
+    const data = await carsController.registerCar({params:{},body:{}}, res);
+    expect(data.response).toBe(400)
+})
+
 it("Should create new car throw error",async ()=>{
     carModel.create = jest.fn().mockRejectedValueOnce({message:'Failed'});
-    const data = await carsController.registerCar({body:{}}, res);
+    const data = await carsController.registerCar({params:{id:'fail'},body:{}}, res);
     expect(data.error).toBe('Failed')
 })
 

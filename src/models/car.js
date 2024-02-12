@@ -47,10 +47,14 @@ const carSchema = new schema({
   description: {
     type: String,
 
+    required: false,
+  },
+  id: {
+    type: String,
     required: true,
   },
 });
 
 const carModel = mongoose.model("car", carSchema);
 
-export {carModel}
+export { carModel };
